@@ -32,7 +32,7 @@ $ vagrant plugin install vagrant-cachier
 Copiar o arquivo **.env.example** para **.env** e alterar as variáveis conforme necessidade.
 
 | Variável        | Descrição             |
-| --------------- |:---------------------:|
+|:--------------- |:--------------------- |
 | NGINX_POLL      | Díretório que pussui arquivos de configurção de virtualhosts(sites) do nginx |
 | PHP_FMP_POLL    | Díretório que pussui arquivos de configurção de pool de sites do PHP-FPM |
 | MARIA_DB_USER   | Usuário padrão que deverá ser criado no MariaDB(não utilizar o root) |
