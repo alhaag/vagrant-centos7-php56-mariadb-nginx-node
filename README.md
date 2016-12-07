@@ -1,5 +1,7 @@
 # CentOS 7 developer environment
 
+Ambiente completo para desenvolvimento em máquina virtual por meio do Vagrant.
+
 ## Funcionalidades
 Prove ambiente de desenvolvimento em CentOS 7 com as seguintes aplicações:
  * PHP-FPM 5.6.x
@@ -11,7 +13,7 @@ Prove ambiente de desenvolvimento em CentOS 7 com as seguintes aplicações:
  * GIT
  * vim
 
-Para um mair desempenho a box do Vagrant e pacotes instalados durante o provisionamento são armazenados em cache.
+Para um maior desempenho a box do Vagrant e pacotes instalados durante o provisionamento são armazenados em cache.
 
 ## Requisitos
  * Virtual Box 5 ou maior
@@ -29,14 +31,15 @@ $ vagrant plugin install vagrant-cachier
 ```
 
 ## Utilização
-Copiar o arquivo **.env.example** para **.env** e alterar as variáveis conforme necessidade.
+Copiar o arquivo **.env.example** para **.env** e alterar as variáveis de ambiente conforme necessidade.
 
-| Variável        | Descrição             |
-|:--------------- |:--------------------- |
-| NGINX_POLL      | Díretório que pussui arquivos de configurção de virtualhosts(sites) do nginx |
-| PHP_FMP_POLL    | Díretório que pussui arquivos de configurção de pool de sites do PHP-FPM |
-| MARIA_DB_USER   | Usuário padrão que deverá ser criado no MariaDB(não utilizar o root) |
-| MARIA_DB_PASSWD | Senha do usuário do MariaDB |
+| Variável         | Descrição             |
+|:---------------- |:--------------------- |
+| NGINX_HOSTS_CONF | Díretório que pussui arquivos de configuração de virtualhosts(sites) do nginx |
+| PHP_FMP_POLL     | Díretório que pussui arquivos de configuração de pool de sites do PHP-FPM |
+| MARIA_DB_USER    | Usuário padrão que deverá ser criado no MariaDB(não utilizar o root) |
+| MARIA_DB_PASSWD  | Senha do usuário do MariaDB |
+| WWW_DATA         | Document root onde estão os arquivos dos sites |
 
 Importante: o arquivo **.env.example** não deve ser editado.
 

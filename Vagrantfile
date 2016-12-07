@@ -15,9 +15,9 @@ Vagrant.configure("2") do |config|
   # Diretórios compartilhados
   # --------------------------------
   # Document root do Nginx
-  config.vm.synced_folder "/home/alhaag/Projects/", "/var/www/html"
+  config.vm.synced_folder ENV['WWW_DATA'], "/var/www/html"
   # Configurações PHP e Nginx para que a script de provisionamento(always.sh) inclua no diretório de destino.
-  config.vm.synced_folder ENV['NGINX_POLL'], "/home/vagrant/nginx.d"
+  config.vm.synced_folder ENV['NGINX_HOSTS_CONF'], "/home/vagrant/nginx.d"
   config.vm.synced_folder ENV['PHP_FMP_POLL'], "/home/vagrant/php-fpm.d"
 
   # Configurações do VirtualBox
